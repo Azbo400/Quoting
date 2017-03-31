@@ -14,26 +14,35 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def homepage():
+    if 'username' in session:
+        return redirect(url_for('home'))
     return render_template('homepage.html')
 
 @app.route('/signup')
 def signup():
+    if 'username' in session:
+        return redirect(url_for('home'))
     return render_template('signup.html')
+
+
+@app.route('/login')
+def login():
+    if 'username' in session:
+        return redirect(url_for('home'))
+    return render_template('login.html')
+
+@app.route('/home')
+def home():
+    if 'username' in session:
+        return 'Home'
+    return redirect(url_for('homepage'))
 
 @app.route('/add_quote')
 def add():
     if 'username' in session:
         return render_template('add.html')
 
-    return 'Please login'
-
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
-@app.route('/home')
-def home():
-    return 'Home, not homepage'
+    return redirect(url_for('homepage'))
 
 
 #Add Quote functionality
