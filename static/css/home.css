@@ -1,0 +1,36 @@
+#body{
+    background-color: #EEEEEE;
+}
+
+.user-data-container{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #E0E0E0;
+}
+
+#welcome-text{
+    text-align: center;
+}
+
+.key-data-container{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#your-key-text{
+    font-size: 25px;
+}
+
+#key-text{
+    padding-top: 2%;
+}
+
+#add-quote-redirect{
+    background-color: #293E6A;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}

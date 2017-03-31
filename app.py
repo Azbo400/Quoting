@@ -32,9 +32,14 @@ def login():
     return render_template('login.html')
 
 @app.route('/home')
-def home():
+def home(username=None, key=None):
     if 'username' in session:
-        return 'Home'
+        get_username = escape(session['username'])
+        get_user = mongo.db.users.find_one({'Username': get_username})
+
+        get_key = get_user['Key']
+        return render_template('home.html', username=get_username, key=get_key)
+        
     return redirect(url_for('homepage'))
 
 @app.route('/add_quote')

@@ -1,0 +1,26 @@
+.nav{
+    background-color: #293E6A;
+    height: 60px;
+}
+
+.nav-item{
+    margin-top: 0.5%;
+}
+
+.nav-btn{
+    margin-left: 83%;
+}
+
+.nav-item-logout{
+    margin-left: 2%;
+}
+
+#nav-btn{
+    background-color: #0F2A66;
+}
+
+a{
+    color: white;
+}
+
+a:hover{color: grey;}
