@@ -1,0 +1,27 @@
+#hiw{
+    font-size: 80px;
+    text-align: center;
+}
+
+#first{
+    text-align: center;
+    font-size: 20px;
+}
+
+#api-call-text{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 3%;
+}
+
+#api-info{
+    text-align: center;
+}
+
+#api-snippet{
+    text-align: center;
+}
+
+code{
+    margin-left: 32%;
+}

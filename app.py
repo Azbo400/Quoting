@@ -84,6 +84,10 @@ def random_quote():
 
     return jsonify(quote_dic)
 
+@app.route('/API')
+def api():
+    return render_template('api.html')
+
 @app.route('/api/quotes/secret_key=<path:api_key>', methods=['GET'])
 def get_user_quotes(api_key):
     if request.method == 'GET':
